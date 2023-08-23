@@ -1,13 +1,27 @@
-**University of Pennsylvania, CIS 565: GPU Programming and Architecture,
-Project 1 - Flocking**
+## **Cuda Flocking Boids Simulation**
 
-Starting code / template obtained from : https://github.com/CIS565-Fall-2022/Project1-CUDA-Flocking.
 
-* (TODO) YOUR NAME HERE
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+## Showcase
+(Simulation with 10K particles)
+![](images/CudaBoidsSimulation.gif)
 
-### (TODO: Your README)
+(Simulation with 25K particles)
+![](images/CudaBoidsSimulation25K.gif)
 
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+## Description
+A simple boids simulation done via Cuda. \
+Techniques implemented :
+  * **Brute Force** approach (Each boid iterates over every other boid).
+  * **Uniform grid** approach (Each boid iterates over boids only in neighbouring spatial grids).
+  * **Coherent grid** approach (Similar to Uniform grid, but memory access is more linear (fewer indrections required)).
+  
+
+> Starting code / template obtained from : https://github.com/CIS565-Fall-2022/Project1-CUDA-Flocking.
+
+**Performance Analysis**
+![Alt text](images/perf_no_visualization.png)
+
+![Alt text](images/perf_with_visualization.png) 
+
+## References
+![CIS 5650 GPU Programming And Architecture Course](https://cis565-fall-2023.github.io/)

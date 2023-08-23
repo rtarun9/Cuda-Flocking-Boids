@@ -16,7 +16,7 @@
 #define UNIFORM_GRID 1
 #define COHERENT_GRID 1
 
-const int N_FOR_VIS = 10000;
+const int N_FOR_VIS = 25000;
 const float DT = 0.2f;
 
 /**
@@ -85,6 +85,7 @@ bool init(int argc, char **argv) {
     glfwTerminate();
     return false;
   }
+
   glfwMakeContextCurrent(window);
   glfwSetKeyCallback(window, keyCallback);
   glfwSetCursorPosCallback(window, mousePositionCallback);
@@ -106,7 +107,6 @@ bool init(int argc, char **argv) {
   cudaGLRegisterBufferObject(boidVBO_velocities);
 
   // Initialize N-body simulation
-      _sleep(1000 * 15);
   Boids::initSimulation(N_FOR_VIS);
 
   updateCamera();

@@ -54,7 +54,7 @@ void checkCUDAError(const char *msg, int line = -1)
 #define rule2Scale 0.1f
 #define rule3Scale 0.1f
 
-#define maxSpeed 2.0f
+#define maxSpeed 1.5f
 
 // Size of the starting area in simulation space.
 #define scene_scale 100.0f
